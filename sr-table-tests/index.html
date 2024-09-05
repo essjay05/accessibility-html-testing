@@ -30,7 +30,7 @@
 <body>
   <h1>Screenreader Table Plain HTML Tests</h1>
   <section>
-    <h2>Header Table Sample (no scope OR aria-roles), uses thead & tbody</h2>
+    <h2>1. Header Table Sample (no scope OR aria-roles), uses thead & tbody</h2>
     <table>
       <thead>
         <tr>
@@ -51,7 +51,7 @@
           <td>West Wing</td>
         </tr>
         <tr>
-          <td>14 April/td>
+          <td>14 April</td>
           <td>The What</td>
           <td>The Library</td>
         </tr>
@@ -59,7 +59,7 @@
     </table>
   </section>
   <section>
-    <h2>Header Table Sample (WITH aria-roles), uses thead & tbody</h2>
+    <h2>2. Header Table Sample (WITH aria-roles), uses thead & tbody</h2>
     <table>
       <thead>
         <tr role="row">
@@ -80,11 +80,140 @@
           <td role="cell">West Wing</td>
         </tr>
         <tr role="row">
-          <td role="cell">14 April/td>
+          <td role="cell">14 April</td>
           <td role="cell">The What</td>
           <td role="cell">The Library</td>
         </tr>
       </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>3. Header Table Sample (WITH aria-roles and scopes), uses thead & tbody</h2>
+    <table>
+      <thead>
+        <tr role="row">
+          <th role="columnheader" scope="col">Date</th>
+          <th role="columnheader" scope="col">Event</th>
+          <th role="columnheader" scope="col">Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row">
+          <td role="cell">12 November</td>
+          <td role="cell">Waltz with Strauss</td>
+          <td role="cell">Main Hall</td>
+        </tr>
+        <tr role="row">
+          <td role="cell">24 March</td>
+          <td role="cell">The Obelisks</td>
+          <td role="cell">West Wing</td>
+        </tr>
+        <tr role="row">
+          <td role="cell">14 April</td>
+          <td role="cell">The What</td>
+          <td role="cell">The Library</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>4. Row Header Table Sample (NO aria-roles AND NO scopes)</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <td>24 March</td>
+        <td>12 February</td>
+        <td>14 April</td>
+      </tr>
+      <tr>
+        <th>Event</th>
+        <td>The What</td>
+        <td>The Obelisks</td>
+        <td>Waltz With Strauss</td>
+      </tr>
+      <tr>
+        <th>Venue</th>
+        <td>Main Hall</td>
+        <td>The Library</td>
+        <td>West Wing</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2>5. Row Header Table Sample (WITH aria-roles AND NO scopes)</h2>
+    <table>
+      <tr role="row">
+        <th role="rowheader">Date</th>
+        <td role="cell">24 March</td>
+        <td role="cell">12 February</td>
+        <td role="cell">14 April</td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader">Event</th>
+        <td role="cell">The What</td>
+        <td role="cell">The Obelisks</td>
+        <td role="cell">Waltz With Strauss</td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader">Venue</th>
+        <td role="cell">Main Hall</td>
+        <td role="cell">The Library</td>
+        <td role="cell">West Wing</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2>6. Row Header Table Sample (WITH aria-roles AND WITH scopes)</h2>
+    <table>
+      <tr role="row">
+        <th role="rowheader" scope="row">Date</th>
+        <td role="cell">24 March</td>
+        <td role="cell">12 February</td>
+        <td role="cell">14 April</td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row">Event</th>
+        <td role="cell">The What</td>
+        <td role="cell">The Obelisks</td>
+        <td role="cell">Waltz With Strauss</td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row">Venue</th>
+        <td role="cell">Main Hall</td>
+        <td role="cell">The Library</td>
+        <td role="cell">West Wing</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2>7. Simple Schedule sample <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H63" rel="noreferrer nofollow">Example 1 from w3.org</a></h2>
+    <table border="1">
+      <caption>Contact Information</caption>
+      <tr>
+        <td></td>
+        <th scope="col">Name</th>
+        <th scope="col">Phone#</th>
+        <th scope="col">Fax#</th>
+        <th scope="col">City</th>
+      </tr><tr>
+        <td>1.</td>
+        <th scope="row">Joel Garner</th>
+        <td>412-212-5421</td>
+        <td>412-212-5400</td>
+        <td>Pittsburgh</td>
+      </tr><tr>
+        <td>2.</td>
+        <th scope="row">Clive Lloyd</th>
+        <td>410-306-1420</td>
+        <td>410-306-5400</td>
+        <td>Baltimore</td>
+      </tr><tr>
+        <td>3.</td>
+        <th scope="row">Gordon Greenidge</th>
+        <td>281-564-6720</td>
+        <td>281-511-6600</td>
+        <td>Houston</td>
+      </tr>
     </table>
   </section>
 </body>
