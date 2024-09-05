@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenreader Table Header Plain HTML Tests</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: center;
+    border: 1px solid grey;
+    padding: 6px;
+  }
+
+  section, h1, h2 {
+    margin: 24px;
+  }
+</style>
+<body>
+  <h1>Screenreader Table Plain HTML Tests</h1>
+  <section>
+    <h2>Header Table Sample (no scope OR aria-roles), uses thead & tbody</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12 November</td>
+          <td>Waltz with Strauss</td>
+          <td>Main Hall</td>
+        </tr>
+        <tr>
+          <td>24 March</td>
+          <td>The Obelisks</td>
+          <td>West Wing</td>
+        </tr>
+        <tr>
+          <td>14 April/td>
+          <td>The What</td>
+          <td>The Library</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Header Table Sample (WITH aria-roles), uses thead & tbody</h2>
+    <table>
+      <thead>
+        <tr role="row">
+          <th role="columnheader">Date</th>
+          <th role="columnheader">Event</th>
+          <th role="columnheader">Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row">
+          <td role="cell">12 November</td>
+          <td role="cell">Waltz with Strauss</td>
+          <td role="cell">Main Hall</td>
+        </tr>
+        <tr role="row">
+          <td role="cell">24 March</td>
+          <td role="cell">The Obelisks</td>
+          <td role="cell">West Wing</td>
+        </tr>
+        <tr role="row">
+          <td role="cell">14 April/td>
+          <td role="cell">The What</td>
+          <td role="cell">The Library</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
